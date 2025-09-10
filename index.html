@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar + Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="w-full bg-white border-b shadow">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-[7rem] relative">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDQ8PEA8ODxANDxANEBAPEA8QDxASGxkYIhkdFhUYKCggGBoxHxoYLTIhJSkrLjAuGR8/ODMtQysvLysBCgoKDg0NFhAPFisZFx0tKy0rLS03KysrKy0rLS0rNy03LS0tLSsrLS03LTcrNysrKysrKystKy0rKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABwgBBQYDBAL/xABJEAABAwIBBQoICwYHAAAAAAABAAIDBBEFBgcSITETFEFRYXF0gaGzIjI0NWKRscIjU1Ryc4KSk6Ky0RYzQlKDwRUkQ2PS4fD/xAAYAQEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EACMRAQACAwACAQUBAQAAAAAAAAABAgMRMRIhBCIyM0FRQiP/2gAMAwEAAhEDEQA/AJxREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAWF5VVQyGN8kjg1kbS97jsa0bSeRaL9ucK+XU/20RMxHXRotbhOOUldp72njm3PR09zN9G97X9R9S2KJ3tlEX4kka0Xc4NHGSAEH6WV4b9i+Nj+21erXAi4IIOsEbCht+kREGEWnxHKigpJTFPVQxSAAlj3WcAdi8qbLHDJZGRx1sD3yObGxrXa3OJsAOtEeUf1vkXlUzNijfI9wayNrnucdjWgXJPUuf/bzCfl0Hrd+iEzEddKsLVYRlJRVz3MpqiOZzG6bmsvcNva62NRM2JjpHuDWRtL3OOxrQLknqQ3D0WVzv7c4V8vp/tr7sKygo61zm01RFMWAOcGG9hyoeUf1tERESwsrC0VVlhhsMjo5K2na+NxY5peLtcNoPKiJmI63ywue/bnCvl9P9tbfD6+KqibLC9skbr6L230XW4uNCJiePrRERL56+mE0MsTvFljfG7mcCD7VVCeIxvcx2pzHFjhxEGytsqz5w6He2MVrLWDpjMOZ4DveVLOf5Eeol02Y2t0MRmhJ1T05IHG5jgR2FynJVpzc1u98Zon3sHTbif6gLfeVllNeJwTuookz74pZtJRg7S6qeOQXaz3/AFKW1W7OZim+8YqnA3bC7ezOQM1Hq0tI9aW4nNbVXLKwWZ/E984RGwm7qR76c3228ZvVZwHUq+qTsxeJ7nWVFKTqqIhK357D+jj9lVr1hhtqybUReFbUCGKSV3ixMfIeZouVo7Vbc4dbvjGK597gTGIczAG+6vrzVUO741S3FxCXznk0Wm34tFctUSmR73u1ue4vdzk3UnZh6HSqayoI/dRMhH13XP5As49y4afVdKmVfm2u6HU925VZVpsq/Ntd0Op7tyqyps0+R2EmZiPL6rovvtUtZVeba7olR3blEuYjy+q6L77VLWVXm2u6JUd25THGmL8arKlLML5VWfQx/mKi1SlmF8qrPoY/zFVjrnxffCaUWFy2X2V0eEUpdqfUSgtgjPH/ADO9Eduzm0dszERuWmzpZcf4fEaSnd/mpm+E4HXAw8PzzweviUEEkm51k7V61lVJPK+WV5fJK4ve520krdZF5LTYvVCJl2xMs6aW2qNn/I8AWcztxWtN7Nlm5yLfi0+nIC2khcN1drG6H+Rv9+IdSsJTwNiY2NjQxjGhjWtADWtGwAL58Kw2Gjgjp4GBkcTdFoHaTxk8JX2q8Rp1Y6RWBERS0YUG58qHc8RhmAsKinAPK9jiD2FqnNRln1odOhppwNcFQWHka9p/u1qieMssbpKFqScxSxyN8aJ7ZG84NwrY00wkjZI3W2RrXg8hFwqkqy+but3xg9E+9yIRCedhLfdVasvjz7mG0x7ERR0dRUG3wEL5ADwkDUOs2VVpHlzi5xJLiXEnhJU657cU3HDWQA2dVygEegzwj26HrUEJZGedzp9E1HIyKKVzSGT6Yjd/Nomzvatjkdie8sSpKi9mxzNDz6DtT/wkqRcvcmNwyborNs+g3N0nJun7z8Zb6lEKjjO1ZpK3S5jOVW73wasdexfFuA+uQ32Er68h8T37hdJOTdzoWsefTb4Lu0Fchn0rdCgp4Qdc9Rpnlaxpv2uarzx13t9EyhBTxmRodzwp0pGupqHuB9FoDR2hygdWdyGot7YVRRWsRTse4cTn+E7tcVSvWGCPq2+nKvzbXdDqe7cqsq02Vfm2u6HU925VZU2T8jsJMzEeX1XRffapayq8213RKju3KJcxHl9V0X32qWsqvNtd0So7tymONMX41WVKWYXyqt+hj/MVFqknMvXRUr8QnmeGRxU7HucdgGkfX/2qx1zYvvhLeU2PQ4ZSvqJjqbqYwHwpH8DW8qrblBjU2I1UlTO673nUBfRY3ga0cQWxy4yrlxeqMjrthju2CK/iN4z6R4eriXOJaVsuTynUcbLJ7BJsRqWU0Dbuebucb6MbOFzuQKyOS+AQYZSsp4RqHhPeQNKR/C5y0ma/BKWlw6KWBwlfVMbJLNaxJ/l5A03FuO67NWrGm+LH4xsREVmwiIgLl85VDvjBqxtrlkW7j+mQ72ArqF41cDZYnxu1tkY6N3MRYoi0bjSpSnTMdW7phssROuCodYcTXNBHbpKEKqB0Uj43eNG90bucGxUk5jcREVTWxONmup21BJ2Dcyb9j+xZ1648U6u+LPVim74oIAbto4msI/3H+E7sLPUucyFwzfuKUkJF2mUSPHoM8J3YLda12N15q6uoqHbZ5Xy24gTqHMApGzE4XpVFVVkaoo2wMPpON3djR9pOyR9WRLGO4cKyjqKc2tPC+PXwEjUeo2VVpYyxzmuBDmktcOIhW4KrfnPwvemMVLQLNncKlnM/WerS0lNmvyK+ol32YnE9OmqaUnXDI2Zg4dF4sbcl2/iWiz61unX00AOqCnLzyOe79GNWozR4nvbGImk2bVNdTO5zrb16TQOtfFnLrd8YzWOvcMk3Acmg0NPaCo36Zzf/AJaaLCqQ1FTBANs80cQ+s4D+6tcxgaAALACwHEFXXNVQ7vjVNcXEOnOfqtNvxaKsYrVafHj1MtXlX5truh1PduVWVabKvzbXdDqe7cqsqLK/I7CTMxHl9V0X32qWsqvNtd0So7tyiXMR5fVdF99qlrKrzbXdEqO7cpjjTF+NVlftsrg1zA4hryC4AmzrbLjrX4WQFRxsxsLiGtBcXGwABJPUOFflTlmtyE3kxtZUs/zMjfg2O/0GHk4Hns2ca4POnkt/htaZI22pqsmSOw1Rv/iZzcI5DyKdettLY5iu20zOZVb2qDQTO+CqXXhJ2Mm4uQO9tuNTgqjMcQQQSCDcEbQerYVY3NxlQMUoWl5G+ILRTjjPA7mPtBU1n9NsF/8AMutREV3QIiICIiCtWcih3vjNay2p8u7j64Dva4rS4ZiL6V0jmbZYJad3zHtsV3+fWh0K+nnA1TwaB5XMd+j2qNFnPXBeNXkVic0+F71weAkWdUl1U763i/hDVAGF0Tqmohgb408rIh9Y29StZTQNijZGwWbG1sbRxNAsFNWuCPcy9FE2ffC7spKwDxXOpnnkPhM6tT/WpZXO5wML35hNXEBdwjMrOPTZ4Qtz2t1q08b5K7rMK20dS6CWOVhs+GRsrTxOabj2JWVDppZJXeNLI6V3O43K8UWTgSnmGotKorKi37uJkIPzySfyD1qZ1H2ZKh3LCnSka6moe8H0WgNHaHKQlrXjuxRqsNVlX5truh1PduVWVabKvzbXdDqe7cqsqtmPyOwkzMR5fVdF99qlrKrzbXdEqO7colzEeX1XRffapayq8213RKju3KY40xfjVZUhZl8Hhqq+SWVumaRjZI2m2jpk2uRwkcCj1SlmF8qrPoY/zFVjrnxe7wmhabK3AGYnRS0z7AuGlE8j93IPFP8A7gJW5RaO2Y3GlTK6kkp5ZIZWlkkLzG9p4HD2rc5EZRvwqujnFzG74Odg/ijO3VxjaOZSBnpyW0mjEoW622jqQBtGxr+rYeccSh9Zz6lw2iaWW1pp2SxskY4OZI0Pa4bHNIuCOReyiTMvlVpNOGzO1tvJTEna3a5nVtHXxKW1eJ27aW8o2IiKVhERBG+e/DXTUEErGue6CoAIaCToPab7OVrVCm8JviZfu3q2SWVZrtjfD5TvaBc0GCPkxVsskb2tpY3y+G0gF58Fo18PhE9SnpFlTEaXpTxjQsEallFK6sGU+Ay0lfUwNikLI5nBhDHEGM62bNWwhaveM3xMv3b1bKyWVfFzz8eN9aPIig3rhVFERYtgY5wPA53hO7XFb1YWVZvEajTVZUgnDa4DaaSoA+7cqv70l+Lk+y5W0SyiY2zyY/P9oUzGQvbXVJc1zb038TSP428alfKhpOHVoAJJpKgADafg3LaWWUiNLVp410qZvCb4mX7t6k/MXTvjqazTY9t4Y7FzS2/hHjUx2RRFdM64fGd7ZREVm7xqqdk0b43tDmSNcx7Tsc0ixBVbMr8lZsOrZIAyR8d9OF4aXaUZ2X5RsPMrMJZRMbZ5McXVUoo6qnljmjjmZJE8SMcGP1OHVrVk8lMaGIUcVRomN5GjJGQQWSDxhY8HCOQhbiyJEaRjx+H7ZREUtRERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB//9k="
+              alt="WIK Group Logo"
+              class="w-24 h-24 object-contain"
+            />
+          </div>
+
+          <!-- Title -->
+          <div class="absolute left-1/2 -translate-x-1/2 text-center">
+            <span class="text-[#0D4021] text-xl font-bold whitespace-nowrap">
+              Pilot Project Change Information
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Table Section -->
+    <section class="p-3 sm:p-5 min-h-screen">
+      <div class="mx-auto w-full max-w-screen-2xl px-4 lg:px-12">
+        <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">
+          <!-- Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-500">
+              <thead class="text-[17px] text-gray-700 uppercase bg-gray-50">
+                <tr>
+                  <th class="px-4 py-3">No</th>
+                  <th class="px-4 py-3">Model</th>
+                  <th class="px-4 py-3">Change Categories</th>
+                  <th class="px-4 py-3">Effective Date</th>
+                  <th class="px-4 py-3">PN/SO/PO#</th>
+                  <th class="px-4 py-3">Serial</th>
+                  <th class="px-4 py-3">Remark</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="px-4 py-3">1</td>
+                  <td class="px-4 py-3">Model A</td>
+                  <td class="px-4 py-3">Parameter Update</td>
+                  <td class="px-4 py-3">2025-09-10</td>
+                  <td class="px-4 py-3">PN12345</td>
+                  <td class="px-4 py-3">SN56789</td>
+                  <td class="px-4 py-3">Initial rollout</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pb-4 flex justify-center">
+            <nav class="flex items-center gap-2 text-gray-600">
+              <button class="px-3 py-1 border rounded hover:bg-gray-100">
+                Prev
+              </button>
+              <span class="px-3 py-1">1</span>
+              <button class="px-3 py-1 border rounded hover:bg-gray-100">
+                Next
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
